@@ -1,11 +1,10 @@
 import { connectDB } from "@/config/connectDB";
 import { authOptions } from "@/lib/authOptions";
 import { ProjectModel } from "@/models/ProjectModel";
-import { error } from "console";
 import { getServerSession } from "next-auth";
-import { NextRequest, NextResponse } from "next/server";
+import {  NextResponse } from "next/server";
 
-export async function GET(request:NextRequest) {
+export async function GET() {
     try{
         const session=await getServerSession(authOptions);
         if(!session){
@@ -23,7 +22,7 @@ export async function GET(request:NextRequest) {
             data:recentProjects
         },{status:201})
 
-    }catch(error:any){
+    }catch(error){
             return NextResponse.json({
                 error:error.message || "Internel server Error"
             },{status:500})

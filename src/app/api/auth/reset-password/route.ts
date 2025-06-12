@@ -1,7 +1,6 @@
 import { connectDB } from "@/config/connectDB";
 import userModel from "@/models/User";
 import bcrypt from "bcryptjs";
-import { error } from "console";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request:NextRequest) {
@@ -23,7 +22,7 @@ export async function POST(request:NextRequest) {
         
 
 
-    }catch(error){
+    }catch{
                 return NextResponse.json({
                     error:"Something Went Wrong"
                 },{

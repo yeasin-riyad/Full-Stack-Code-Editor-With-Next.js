@@ -47,8 +47,8 @@ const LoginPage = () => {
         redirect:false,
       })
       setLoading(false)
-      if(result.error){
-        toast.error(result.error)
+      if(result?.error){
+        toast.error(result?.error)
       }else{
         toast.success("Login Successfully..")
         router.push("/dashboard")

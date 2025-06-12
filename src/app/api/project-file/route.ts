@@ -40,7 +40,7 @@ export async function POST(request:NextRequest) {
             )
         }
 
-    }catch(e){
+    }catch{
         return NextResponse.json(
             {error:"Something Went Wrong"},
             {status:500}
@@ -74,7 +74,7 @@ export async function GET(request:NextRequest) {
             {status:200}
             
         )
-    }catch(e){
+    }catch{
         return NextResponse.json(
             {error:"Something Went Wrong"},
             {status:500}

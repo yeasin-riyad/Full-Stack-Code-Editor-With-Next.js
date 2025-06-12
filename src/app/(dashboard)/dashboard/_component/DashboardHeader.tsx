@@ -21,7 +21,9 @@ const DashboardHeader = () => {
       </div>
 
       <div className="hidden md:block">
-        <UserAvatar user={session?.data?.user}/>
+        {session?.data?.user && <UserAvatar user={session?.data?.user} />}
+
+
       </div>
 
       <div className="md:hidden">

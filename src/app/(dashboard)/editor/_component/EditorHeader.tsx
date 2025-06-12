@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import UserAvatar from "@/components/UserAvatar";
 import AxiosPublic from "@/lib/AxiosPublic";
-import { ArrowLeft, Database, Play } from "lucide-react";
+import { ArrowLeft, Database, Pause, Play } from "lucide-react";
 import { useSession } from "next-auth/react";
 import { useParams, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -16,7 +16,8 @@ const EditorHeader = () => {
   const router = useRouter();
   const { projectId} = useParams();
   const [isLoading, setIsLoading] = useState<boolean>(true);
-   const {isLoading:editorUpdateLoading}=useEditorContext()
+   const {isLoading:editorUpdateLoading,openBrowser,setOpenBrowser}=useEditorContext()
+   
   
   const [data, setData] = useState({
     name: "",
@@ -82,8 +83,8 @@ const EditorHeader = () => {
 
       {/* Right Side */}
       <div className="ml-auto w-fit flex items-center gap-6">
-        <div className="bg-primary/70 hover:bg-primary/90 p-1 cursor-pointer rounded-full">
-          <Play />
+        <div onClick={()=>setOpenBrowser(!openBrowser)} className="bg-primary/70 hover:bg-primary/90 p-1 cursor-pointer rounded-full">
+         {openBrowser ?<Pause/> : <Play />} 
         </div>
         <UserAvatar user={session?.data?.user} />
       </div>

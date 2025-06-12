@@ -41,7 +41,6 @@ const EditorSidebar = () => {
             }
 
         }catch(e){
-            console.log(e,"Error")
             toast.error(e.response.data.error);
         }finally{
             setIsLoading(false)
@@ -58,7 +57,7 @@ const EditorSidebar = () => {
                 setFileList(response.data.data || []);
             }
 
-        }catch(error:any){
+        }catch(error){
             toast.error(error.response.data.error)
         }finally{
             setIsLoading(false);

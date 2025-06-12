@@ -25,7 +25,6 @@ const formSchema = z.object({
 
 const ForgotPassword = () => {
   const [loading,setLoading]=useState<boolean>(false);
-    const router=useRouter();
     // 1. Define your form.
     const form = useForm<z.infer<typeof formSchema>>({
       resolver: zodResolver(formSchema),
@@ -45,7 +44,7 @@ const ForgotPassword = () => {
                 form.reset();
               }
       }catch(error){
-        toast.error(error?.response?.data?.error)
+        toast.error("Something went wrong")
 
       }finally{
         setLoading(false);

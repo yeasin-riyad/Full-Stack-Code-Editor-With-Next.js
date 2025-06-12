@@ -19,6 +19,7 @@ import Link from "next/link"
 import AxiosPublic from "@/lib/AxiosPublic"
 import { toast } from "sonner"
 import { useRouter } from "next/navigation"
+import axios from "axios"
 
 
 const formSchema=z.object({
@@ -64,10 +65,13 @@ const RegisterPage = () => {
         form.reset();
         router.push("/login")
       }
-      }catch(error){
-        toast.error(error?.response?.data?.error)
-
-      }finally{
+      }catch (error) {
+  if (axios.isAxiosError(error)) {
+    toast.error(error.response?.data?.error || "Something went wrong");
+  } else {
+    toast.error("Unknown error occurred");
+  }
+}finally{
         setLoading(false);
       }
 

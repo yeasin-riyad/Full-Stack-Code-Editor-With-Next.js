@@ -19,7 +19,7 @@ const DashboardSidebar = () => {
     const pathname=usePathname()
     const session=useSession()
     const [recentProjectsUpdate,setRecentProjectsUpdate]=useState([]);
-    const [isLoading,setIsLoading]=useState(true)
+    const [,setIsLoading]=useState(true)
 
   
   

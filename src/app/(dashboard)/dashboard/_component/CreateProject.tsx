@@ -9,6 +9,7 @@ import {
   } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import AxiosPublic from "@/lib/AxiosPublic"
+import axios from "axios"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 import { toast } from "sonner"
@@ -24,7 +25,7 @@ const CreateProject = ({buttonVariant}:TProjectType) => {
     const [isOpen,setIsOpen]=useState<boolean>(false);
 
 
-    const handleCreateProject =async(e)=>{
+    const handleCreateProject =async(e:any)=>{
         e.preventDefault()
         if(!projectName){
           return toast.error("Project Name is require")
@@ -44,7 +45,11 @@ const CreateProject = ({buttonVariant}:TProjectType) => {
           }
 
         }catch(error){
-            toast.error(error?.response.data?.error)
+            if (axios.isAxiosError(error)) {
+    toast.error(error.response?.data?.error || "Something went wrong");
+  } else {
+    toast.error("Unknown error occurred");
+  }
 
         }finally{
           setLoading(false)

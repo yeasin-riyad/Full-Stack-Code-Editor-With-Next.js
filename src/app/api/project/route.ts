@@ -66,7 +66,7 @@ export async function POST(request:NextRequest) {
         },{status:201})
 
 
-    }catch(error:any){
+    }catch(error){
         return NextResponse.json({
             error:error.message || "Internel server Error"
         },{status:500})
@@ -112,7 +112,7 @@ export async function GET(request:NextRequest){
 
         },{status:201})
 
-    }catch(error:any){
+    }catch(error){
         return NextResponse.json({
             error:error.message || "Internel server Error"
         },{status:500})
@@ -147,7 +147,7 @@ export async function PUT(request:NextRequest) {
             message:"Project Updated Successfully"
         },{status:200})
 
-    }catch(error:any){
+    }catch(error){
         return NextResponse.json({
             error:error.message || "Internel server Error"
         },{status:500})

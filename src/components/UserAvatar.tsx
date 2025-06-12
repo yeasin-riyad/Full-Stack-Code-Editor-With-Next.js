@@ -6,8 +6,8 @@ import { Button } from './ui/button'
 import { signOut } from 'next-auth/react'
 
 interface data{
-    image:string,
-    name:string
+    image:string | null,
+    name:string | null
 }
 const UserAvatar = ({user}:{user:data}) => {
   return (

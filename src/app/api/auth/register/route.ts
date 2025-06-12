@@ -24,7 +24,7 @@ export async function POST(request:NextRequest) {
         )
         }
 
-        const user=await userModel.create({
+        await userModel.create({
             name,
             email,
             password
@@ -35,7 +35,7 @@ export async function POST(request:NextRequest) {
             {status:201}
         )
 
-    }catch(error){
+    }catch{
        
         return NextResponse.json({
             error:"Failed To Register User"

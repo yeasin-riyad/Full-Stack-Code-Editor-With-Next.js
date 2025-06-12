@@ -73,7 +73,7 @@ export async function GET(request:NextRequest,{params}:{params:Promise<{projectI
                 }
             }
         )
-    }catch(e){
+    }catch{
         return new NextResponse(
             "ProjectId & FileName Are Required",{
                 headers:{

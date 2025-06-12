@@ -34,7 +34,7 @@ export async function POST(request:NextRequest){
         })
 
 
-    }catch(error){
+    }catch{
         return NextResponse.json({
             error:"Something Went Wrong"
         },
@@ -70,7 +70,7 @@ export async function PUT(request:NextRequest){
             )
         }
 
-        const updateContent= await FileModel.findByIdAndUpdate(fileId,{
+         await FileModel.findByIdAndUpdate(fileId,{
             content
 
         })
@@ -85,7 +85,7 @@ export async function PUT(request:NextRequest){
         )
 
 
-    }catch(error){
+    }catch{
 
           return NextResponse.json({
             error:"Something Went Wrong"
