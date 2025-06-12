@@ -1,7 +1,48 @@
-A powerful online code editor using Next.js, React, Node.js, and MongoDB. The application will feature secure authentication through Next-Auth, allowing users to create accounts, recover passwords, and resend verification emails. We was using use Zod and React Hook Form to validate forms, ensuring a seamless user experience. The editor, beautifully styled with Tailwind CSS and Shadcn UI, enables users to write and run code directly in the browser. Additionally, users can generate and share unique links to their code with others.
+# 🧠 Online Code Editor
 
-🚀 Build Editor: Next.js, React, Node.js, MongoDB.
-🔐 Secure Auth: Next-Auth for sign-up.
-📝 Form Validation: Zod & React Hook Form.
-🎨 UI Design: Tailwind CSS & Shadcn UI.
-💻 Run Code: Execute code in-browser.
+A **powerful online code editor** built with the modern web stack — **Next.js, React, Node.js**, and **MongoDB**. It provides a seamless and secure experience for writing, running, and sharing code — right from your browser.
+
+---
+
+## 🚀 Features
+
+### 🔨 Build Stack
+- **Frontend**: [Next.js](https://nextjs.org/), [React](https://react.dev/)
+- **Backend**: [Node.js](https://nodejs.org/), [MongoDB](https://www.mongodb.com/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/), [Shadcn UI](https://ui.shadcn.com/)
+
+### 🔐 Secure Authentication
+- User-friendly **sign-up**, **sign-in**
+- **Email verification**, **resend verification links**
+- **Forgot password** and **password reset**
+- Powered by [Next-Auth](https://next-auth.js.org/)
+
+### 🧾 Form Validation
+- **Zod** + **React Hook Form** for robust and scalable validation
+
+### 💻 In-Browser Code Execution
+- Write, compile, and run your code right inside the browser
+
+### 🔗 Shareable Code Links
+- Instantly generate and share a unique link to your code with others
+
+---
+
+## 📸 UI Preview
+
+> _Beautiful and responsive design, built with Tailwind CSS and Shadcn UI._  
+> _Dark mode and light mode supported._
+
+---
+
+| Technology   | Purpose                       |
+| ------------ | ----------------------------- |
+| Next.js      | Full-stack React framework    |
+| React        | Frontend UI                   |
+| Node.js      | Server runtime                |
+| MongoDB      | Database                      |
+| Next-Auth    | Authentication                |
+| Zod + RHF    | Form validation               |
+| Tailwind CSS | Utility-first CSS framework   |
+| Shadcn UI    | Styled, accessible components |
+
