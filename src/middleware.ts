@@ -21,7 +21,7 @@ export default withAuth(
         callbacks:{
             authorized:({token,req})=>{
                 const {pathname}=req.nextUrl;
-                if(pathname==='/login' || pathname==='/register' || pathname=='forgot-password'){
+                if(pathname==='/login' || pathname==='/register' || pathname=='/forgot-password'){
                     return true
                 }
                 return !!token
