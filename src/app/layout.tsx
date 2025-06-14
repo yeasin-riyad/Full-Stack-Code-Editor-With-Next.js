@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "One Editor",
+  title: "My Editor",
   description: "Build Space Your Team, Your Idea, Your Editor",
 };
 
