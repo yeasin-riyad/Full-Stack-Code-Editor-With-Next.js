@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧠 Online Code Editor
 
-## Getting Started
+A **powerful online code editor** built with the modern web stack — **Next.js, React, Node.js**, and **MongoDB**. It provides a seamless and secure experience for writing, running, and sharing code — right from your browser.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🔨 Build Stack
+- **Frontend**: [Next.js](https://nextjs.org/), [React](https://react.dev/)
+- **Backend**: [Node.js](https://nodejs.org/), [MongoDB](https://www.mongodb.com/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/), [Shadcn UI](https://ui.shadcn.com/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🔐 Secure Authentication
+- User-friendly **sign-up**, **sign-in**
+- **Email verification**, **resend verification links**
+- **Forgot password** and **password reset**
+- Powered by [Next-Auth](https://next-auth.js.org/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🧾 Form Validation
+- **Zod** + **React Hook Form** for robust and scalable validation
 
-## Learn More
+### 💻 In-Browser Code Execution
+- Write, compile, and run your code right inside the browser
 
-To learn more about Next.js, take a look at the following resources:
+### 🔗 Shareable Code Links
+- Instantly generate and share a unique link to your code with others
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📸 UI Preview
 
-## Deploy on Vercel
+> _Beautiful and responsive design, built with Tailwind CSS and Shadcn UI._  
+> _Dark mode and light mode supported._
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Technology   | Purpose                       |
+| ------------ | ----------------------------- |
+| Next.js      | Full-stack React framework    |
+| React        | Frontend UI                   |
+| Node.js      | Server runtime                |
+| MongoDB      | Database                      |
+| Next-Auth    | Authentication                |
+| Zod + RHF    | Form validation               |
+| Tailwind CSS | Utility-first CSS framework   |
+| Shadcn UI    | Styled, accessible components |
+
